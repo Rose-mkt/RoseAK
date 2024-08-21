@@ -8,6 +8,10 @@ y = df['species']
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 
+st.sidebar.title('Classification')
+
+classifier = st.sidebar.selectbox('Classifier', ('KNN', 'Decision Tree', 'Random Forest', 'SVM'))
+
 from sklearn.metrics import accuracy_score
 y_pred = knn.predict(x_test)
 accuracy_score(y_test, y_pred)
