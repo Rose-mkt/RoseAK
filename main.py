@@ -21,3 +21,15 @@ svm = SVC()
 svm.fit(x_train, y_train)
 y_pred = svm.predict(x_test)
 accuracy_score(y_test, y_pred)
+
+from sklearn.tree import DecisionTreeClassifier
+dt = DecisionTreeClassifier()
+dt.fit(x_train, y_train)
+y_pred = dt.predict(x_test)
+accuracy_score(y_test, y_pred)
+
+from sklearn.ensemble import RandomForestClassifier
+rf = RandomForestClassifier()
+rf.fit(x_train, y_train)
+y_pred = rf.predict(x_test)
+accuracy_score(y_test, y_pred)
